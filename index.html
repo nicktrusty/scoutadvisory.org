@@ -85,7 +85,7 @@ section{padding-block:72px;border-top:1px solid var(--rule)}
 .sec-head h2{font-size:var(--step-3);font-weight:800}
 .sec-head p{color:var(--muted)}
 
-.fit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.fit{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
 .fit div{display:grid;gap:8px;align-content:start}
 .fit h3{font-size:var(--step-1);font-weight:700}
 .fit p{color:var(--muted);font-size:1rem}
@@ -131,12 +131,12 @@ footer{padding-block:28px 40px;border-top:1px solid var(--rule);color:var(--mute
 footer .bar{gap:12px}
 
 @media (max-width:860px){
-  .fit{grid-template-columns:1fr}
+  .fit{grid-template-columns:repeat(2,minmax(0,1fr))}
   .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
   .about{grid-template-columns:1fr;gap:36px}
 }
 @media (max-width:620px){
-  .services{grid-template-columns:1fr}
+  .services,.fit{grid-template-columns:1fr}
   .services article,.services article:nth-child(even){padding:22px 0;border-left:0}
   .steps{grid-template-columns:1fr}
   section{padding-block:56px}
@@ -214,12 +214,16 @@ footer .bar{gap:12px}
     <div class="wrap">
       <div class="sec-head">
         <p class="label">Who it's for</p>
-        <h2>You need customer success leadership before you need a full-time VP.</h2>
+        <h2>Senior customer success help, sized to where your team is today.</h2>
       </div>
       <div class="fit">
         <div>
           <h3>Outgrowing founder-led accounts</h3>
           <p>The founder knows every customer by gut. That stops working at scale. Build the system now, while you can still check it against instinct.</p>
+        </div>
+        <div>
+          <h3>Backing your CS leader</h3>
+          <p>Your VP has the strategy but not the bandwidth. I build the health score, playbooks and reporting alongside them, so the team runs on a system instead of heroics.</p>
         </div>
         <div>
           <h3>Between CS leaders</h3>
