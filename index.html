@@ -70,8 +70,10 @@ nav a:hover{color:var(--rust-ink)}
 .wire span{display:block;font-size:.88rem;color:var(--muted);line-height:1.4;margin-top:2px}
 .perch{position:absolute;top:0;right:calc(20% - 54px);width:72px;height:72px;transform-origin:50% 90%;animation:hop 5.5s ease-in-out 1.2s infinite}
 @keyframes hop{0%,86%,100%{transform:translateY(0) rotate(0)}90%{transform:translateY(-8px) rotate(-4deg)}94%{transform:translateY(0) rotate(2deg)}}
-.aside{position:absolute;top:-14px;right:calc(20% + 34px);display:flex;align-items:flex-start;gap:2px;font-family:"Caveat","Bradley Hand","Segoe Print",cursive;font-weight:500;font-size:1.35rem;line-height:1;color:var(--muted);transform:rotate(-3deg);pointer-events:none}
-.aside svg{width:58px;height:40px;margin-top:6px;flex:none}
+.aside{position:absolute;top:0;left:calc(80% + 40px);display:flex;align-items:flex-start;gap:2px;font-family:"Caveat","Bradley Hand","Segoe Print",cursive;font-weight:500;font-size:1.3rem;line-height:1;color:var(--muted);pointer-events:none}
+.aside span{transform:rotate(4deg);display:inline-block;max-width:7.5em}
+.aside svg{width:40px;height:32px;margin-top:14px;flex:none;transform:scaleX(-1)}
+@media (max-width:1000px){.aside{display:none}}
 .wire-note{margin-top:18px;font-size:.92rem;color:var(--muted)}
 @media (max-width:720px){
   .wire{padding-top:0}
@@ -201,8 +203,7 @@ footer .bar{gap:12px}
     </div>
 
     <div class="wire" aria-label="The customer lifecycle Scout Advisory works on">
-      <span class="aside" aria-hidden="true">this is a mockingbird, btw
-        <svg viewBox="0 0 58 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8 C 22 2, 42 8, 50 30"/><path d="M43 26 L50 31 L53 22"/></svg>
+      <span class="aside" aria-hidden="true"><svg viewBox="0 0 44 34" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4 C 18 0, 34 6, 40 26"/><path d="M33 22 L40 28 L43 19"/></svg><span>this is a mockingbird, btw</span>
       </span>
       <svg class="perch" viewBox="0 0 100 100" fill="var(--ink)" style="color:var(--ink)" aria-hidden="true"><use href="#bird"/></svg>
       <ol>
