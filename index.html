@@ -51,6 +51,7 @@ nav a:hover{color:var(--rust-ink)}
 .hero{padding-block:56px 40px}
 .hero h1{font-size:var(--step-4);font-weight:800;max-width:15ch}
 .hero h1 em{font-style:normal;color:var(--rust-ink)}
+.hero .lede cite{font-style:italic}
 .hero .lede{margin-top:22px;font-size:var(--step-1);max-width:46ch;color:var(--muted)}
 .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;align-items:center}
 .btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;background:var(--pine);color:var(--on-pine);font-weight:700;text-decoration:none;border:2px solid var(--pine)}
@@ -103,7 +104,7 @@ section{padding-block:72px;border-top:1px solid var(--rule)}
 .pine .sec-head p{color:var(--on-pine-muted)}
 .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;list-style:none;margin:0;padding:0;counter-reset:s}
 .steps li{display:grid;gap:8px;align-content:start;counter-increment:s;border-top:2px solid var(--on-pine-muted);padding-top:16px}
-.steps li::before{content:"Week " attr(data-wk);font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rust)}
+.steps li::before{content:"Phase " attr(data-wk);font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rust)}
 .steps h3{font-size:var(--step-1);font-weight:700;color:var(--on-pine)}
 .steps p{color:var(--on-pine-muted);font-size:1rem}
 
@@ -191,7 +192,7 @@ footer .bar{gap:12px}
   <div class="wrap hero">
     <p class="label">Fractional customer success leadership</p>
     <h1 style="margin-top:14px">Renewal is the floor. <em>Upsell is the plan.</em></h1>
-    <p class="lede">Scout Advisory helps B2B SaaS and EdTech companies, and the nonprofits that serve schools, turn closed-won customers into growing recurring revenue.</p>
+    <p class="lede">Named for Scout Finch of <cite>To Kill a Mockingbird</cite>: curious, direct and unwilling to accept the official story. We read your customer data the same way, turning closed-won deals into growing recurring revenue for B2B SaaS and EdTech.</p>
     <div class="cta">
       <a class="btn" href="#contact">Start a conversation</a>
       <a class="btn ghost" href="#services">See services</a>
@@ -223,7 +224,7 @@ footer .bar{gap:12px}
         </div>
         <div>
           <h3>Backing your CS leader</h3>
-          <p>Your VP has the strategy but not the bandwidth. I build the health score, playbooks and reporting alongside them, so the team runs on a system instead of heroics.</p>
+          <p>Your VP has the strategy but not the bandwidth. Scout builds the health score, playbooks and reporting alongside them, so the team runs on a system instead of heroics.</p>
         </div>
         <div>
           <h3>Between CS leaders</h3>
@@ -274,13 +275,13 @@ footer .bar{gap:12px}
       <div class="sec-head">
         <p class="label">How it works</p>
         <h2>A typical first engagement</h2>
-        <p>Usually about five weeks. You end with a working system your team owns, not a slide deck.</p>
+        <p>Each one is scoped to your team and your data. You end with a working system your people own and run.</p>
       </div>
       <ol class="steps">
         <li data-wk="1"><h3>Read the data</h3><p>Usage, onboarding, support and CRM history. Plus conversations with the people closest to customers.</p></li>
         <li data-wk="2"><h3>Find the leaks</h3><p>Where customers stall between closed-won and full adoption, and which accounts are quietly ready to grow.</p></li>
-        <li data-wk="3–4"><h3>Build the playbook</h3><p>The health score, the plays that follow from it, and the sequences and reports that run them.</p></li>
-        <li data-wk="5"><h3>Hand it off</h3><p>Your team runs it with me alongside, then on their own. Ongoing fractional support if you want it.</p></li>
+        <li data-wk="3"><h3>Build the playbook</h3><p>The health score, the plays that follow from it, and the sequences and reports that run them.</p></li>
+        <li data-wk="4"><h3>Hand it off</h3><p>Your team runs it with Scout alongside, then on their own. Ongoing fractional support if you want it.</p></li>
       </ol>
     </div>
   </section>
@@ -289,21 +290,18 @@ footer .bar{gap:12px}
     <div class="wrap about">
       <div class="prose">
         <p class="label">About</p>
-        <h2>Led by Nick Trusty</h2>
-        <p>I've built customer success from scratch as a founder and led it at national scale. At a leading literacy nonprofit, I ran a 35-person post-sale organization serving K-12 districts and schools across the country, owning onboarding, adoption, renewals and expansion, and leading AI enablement across sales and CS.</p>
-        <p>Before that, I co-founded Alumni Spaces, a SaaS platform for universities, where I ran customer success myself and kept every national client for five years. I also co-founded Lat Long, a digital product agency for mission-driven organizations.</p>
-        <p>I do my best work hands-on: on customer calls, in the account data, and building the first version of the system before a team scales it.</p>
+        <h2>Who you'd work with</h2>
+        <p>Every engagement is led by Nick Trusty and built around your team, your customers and the data you already have. The goal is a system your people own and keep running after the engagement ends.</p>
+        <p>Nick has done this work from both sides of the table. As a co-founder of Alumni Spaces, a SaaS platform for universities, he built customer success from scratch and kept every national client for five years. At a leading literacy nonprofit, he led a 35-person post-sale organization serving K-12 districts across the country, covering onboarding, adoption, renewals, expansion and AI enablement.</p>
+        <p>That means someone who will join customer calls, dig into the account data, and build the first version with your team so they can scale it.</p>
       </div>
       <div class="side">
         <dl class="ledger" aria-label="Track record">
           <div><dt>76→86%</dt><dd>Renewal rate at a leading literacy nonprofit serving K-12 schools</dd></div>
           <div><dt>2,950</dt><dd>School districts in that portfolio, plus 24,000 schools</dd></div>
           <div><dt>~500K</dt><dd>Active classroom users at peak adoption</dd></div>
-          <div><dt>0</dt><dd>Customers lost in five years at a SaaS company I co-founded</dd></div>
+          <div><dt>0</dt><dd>Customers lost in five years at a SaaS company Nick co-founded</dd></div>
         </dl>
-        <div class="name-note">
-          <b>Why "Scout"?</b> After Scout Finch: curious, direct, and not inclined to take the official story at face value. That's how we read your customer data.
-        </div>
       </div>
     </div>
   </section>
@@ -311,7 +309,7 @@ footer .bar{gap:12px}
   <section id="contact">
     <div class="wrap contact">
       <p class="label">Contact</p>
-      <h2>Tell me where your customers stall.</h2>
+      <h2>Tell us where your customers stall.</h2>
       <p style="max-width:52ch;color:var(--muted)">A 30-minute call is enough to tell whether a fractional engagement makes sense. No pitch deck required.</p>
       <div class="copyrow">
         <a class="addr" id="addr" href="mailto:nick@scoutadvisory.org">nick@scoutadvisory.org</a>
