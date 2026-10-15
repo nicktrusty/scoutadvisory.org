@@ -79,19 +79,6 @@ nav a:hover{color:var(--rust-ink)}
   .perch{display:none}
 }
 
-/* proof strip */
-.proof{border-top:2px solid var(--ink);border-bottom:1px solid var(--rule);margin-top:8px}
-.proof dl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:0}
-.proof div{padding:20px 20px 20px 0;display:grid;gap:4px;align-content:start}
-.proof div + div{padding-left:20px;border-left:1px solid var(--rule)}
-.proof dt{font-family:var(--display);font-weight:800;font-size:var(--step-3);letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
-.proof dd{margin:0;color:var(--muted);font-size:.92rem;line-height:1.4}
-@media (max-width:760px){
-  .proof dl{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .proof div:nth-child(3){padding-left:0;border-left:0}
-  .proof div:nth-child(n+3){border-top:1px solid var(--rule)}
-}
-
 /* sections */
 section{padding-block:72px;border-top:1px solid var(--rule)}
 .sec-head{display:grid;gap:12px;margin-bottom:36px;max-width:60ch}
@@ -223,17 +210,6 @@ footer .bar{gap:12px}
     </div>
   </div>
 
-  <div class="wrap">
-    <div class="proof" aria-label="Track record">
-      <dl>
-        <div><dt>76→86%</dt><dd>Renewal rate lift at a leading literacy nonprofit serving K-12 schools</dd></div>
-        <div><dt>2,950</dt><dd>School districts in that portfolio, plus 24,000 schools</dd></div>
-        <div><dt>~500K</dt><dd>Active classroom users at peak adoption</dd></div>
-        <div><dt>0</dt><dd>Customers lost in five years at a SaaS company I co-founded</dd></div>
-      </dl>
-    </div>
-  </div>
-
   <section id="fit">
     <div class="wrap">
       <div class="sec-head">
@@ -315,6 +291,12 @@ footer .bar{gap:12px}
         <p>I do my best work hands-on: on customer calls, in the account data, and building the first version of the system before a team scales it.</p>
       </div>
       <div class="side">
+        <dl class="ledger" aria-label="Track record">
+          <div><dt>76→86%</dt><dd>Renewal rate at a leading literacy nonprofit serving K-12 schools</dd></div>
+          <div><dt>2,950</dt><dd>School districts in that portfolio, plus 24,000 schools</dd></div>
+          <div><dt>~500K</dt><dd>Active classroom users at peak adoption</dd></div>
+          <div><dt>0</dt><dd>Customers lost in five years at a SaaS company I co-founded</dd></div>
+        </dl>
         <div class="name-note">
           <b>Why "Scout"?</b> After Scout Finch: curious, direct, and not inclined to take the official story at face value. That's how we read your customer data.
         </div>
