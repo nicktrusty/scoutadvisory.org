@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Scout Advisory | Fractional Customer Success Leadership</title>
+<meta name="description" content="Fractional customer success leadership for B2B SaaS and EdTech. Turn closed-won customers into growing recurring revenue.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+/* Layout: single reading column on a pine-and-paper field; one wide lifecycle "wire" the bird perches on is the signature moment */
+:root{
+  --paper:#F6F3EC; --ink:#18261F; --pine:#1C2B24; --rust:#C4561F; --rust-ink:#A9461A;
+  --muted:#4F5B54; --rule:#D9D3C6; --wash:#ECE6DA; --on-pine:#F6F3EC; --on-pine-muted:#B9C2BC;
+  --display:"Bricolage Grotesque", "Arial Black", system-ui, sans-serif;
+  --body:"Atkinson Hyperlegible", "Helvetica Neue", Arial, sans-serif;
+  --step-0:1.0625rem; --step-1:1.25rem; --step-2:1.6rem; --step-3:2.25rem; --step-4:clamp(2.6rem, 6.5vw, 4.6rem);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#121A16; --ink:#ECE8DF; --pine:#0C130F; --rust:#E07A43; --rust-ink:#F0925D;
+  --muted:#A7B0AA; --rule:#2C3832; --wash:#19231E; --on-pine:#ECE8DF; --on-pine-muted:#9AA59F; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --paper:#121A16; --ink:#ECE8DF; --pine:#0C130F; --rust:#E07A43; --rust-ink:#F0925D;
+  --muted:#A7B0AA; --rule:#2C3832; --wash:#19231E; --on-pine:#ECE8DF; --on-pine-muted:#9AA59F; color-scheme:dark }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:var(--step-0);line-height:1.6}
+a{color:var(--rust-ink);text-underline-offset:3px}
+a:hover{color:var(--ink)}
+:focus-visible{outline:3px solid var(--rust);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--display);line-height:1.05;letter-spacing:-0.02em;text-wrap:balance;margin:0}
+p{margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+.label{font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--rust-ink)}
+
+/* header */
+header{padding-block:22px}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.brand svg{width:40px;height:40px;flex:none}
+.brand b{font-family:var(--display);font-weight:800;font-size:1.45rem;letter-spacing:-.03em;line-height:1}
+.brand small{display:block;font-family:var(--display);font-weight:700;font-size:.58rem;letter-spacing:.38em;color:var(--muted);margin-top:3px}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav a{color:var(--ink);text-decoration:none;font-weight:700;font-size:.95rem}
+nav a:hover{color:var(--rust-ink)}
+
+/* hero */
+.hero{padding-block:56px 40px}
+.hero h1{font-size:var(--step-4);font-weight:800;max-width:15ch}
+.hero h1 em{font-style:normal;color:var(--rust-ink)}
+.hero .lede{margin-top:22px;font-size:var(--step-1);max-width:46ch;color:var(--muted)}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;align-items:center}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;background:var(--pine);color:var(--on-pine);font-weight:700;text-decoration:none;border:2px solid var(--pine)}
+.btn:hover{background:var(--rust);border-color:var(--rust);color:#fff}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--rule)}
+.btn.ghost:hover{border-color:var(--ink);background:transparent;color:var(--ink)}
+
+/* the wire: customer lifecycle, bird perched at Expanded */
+.wire{margin-top:56px;position:relative;padding-top:58px}
+.wire ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));position:relative}
+.wire ol::before{content:"";position:absolute;left:0;right:0;top:9px;height:3px;background:var(--ink);border-radius:2px}
+.wire li{position:relative;padding-top:30px;padding-right:10px}
+.wire li::before{content:"";position:absolute;top:2px;left:0;width:17px;height:17px;border-radius:50%;background:var(--paper);border:3px solid var(--ink)}
+.wire li:last-child::before{background:var(--rust);border-color:var(--rust)}
+.wire b{display:block;font-family:var(--display);font-weight:700;font-size:1.05rem}
+.wire span{display:block;font-size:.88rem;color:var(--muted);line-height:1.4;margin-top:2px}
+.perch{position:absolute;top:0;right:calc(20% - 54px);width:72px;height:72px;transform-origin:50% 90%;animation:hop 5.5s ease-in-out 1.2s infinite}
+@keyframes hop{0%,86%,100%{transform:translateY(0) rotate(0)}90%{transform:translateY(-8px) rotate(-4deg)}94%{transform:translateY(0) rotate(2deg)}}
+.wire-note{margin-top:18px;font-size:.92rem;color:var(--muted)}
+@media (max-width:720px){
+  .wire{padding-top:0}
+  .wire ol{grid-template-columns:1fr;gap:0;padding-left:8px}
+  .wire ol::before{left:15px;right:auto;top:6px;bottom:6px;width:3px;height:auto}
+  .wire li{padding:0 0 18px 34px}
+  .wire li::before{top:4px;left:0}
+  .perch{display:none}
+}
+
+/* sections */
+section{padding-block:72px;border-top:1px solid var(--rule)}
+.sec-head{display:grid;gap:12px;margin-bottom:36px;max-width:60ch}
+.sec-head h2{font-size:var(--step-3);font-weight:800}
+.sec-head p{color:var(--muted)}
+
+.fit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.fit div{display:grid;gap:8px;align-content:start}
+.fit h3{font-size:var(--step-1);font-weight:700}
+.fit p{color:var(--muted);font-size:1rem}
+
+.services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:2px solid var(--ink)}
+.services article{padding:26px 28px 28px 0;border-bottom:1px solid var(--rule);display:grid;gap:8px;align-content:start}
+.services article:nth-child(even){padding-left:28px;padding-right:0;border-left:1px solid var(--rule)}
+.services h3{font-size:var(--step-1);font-weight:700}
+.services p{color:var(--muted);font-size:1rem}
+.services .tag{font-size:.82rem;color:var(--rust-ink);font-weight:700}
+
+/* engagement: a real sequence */
+.pine{background:var(--pine);color:var(--on-pine);border-top:0}
+.pine .label{color:var(--rust)}
+.pine .sec-head p{color:var(--on-pine-muted)}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{display:grid;gap:8px;align-content:start;counter-increment:s;border-top:2px solid var(--on-pine-muted);padding-top:16px}
+.steps li::before{content:"Week " attr(data-wk);font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rust)}
+.steps h3{font-size:var(--step-1);font-weight:700;color:var(--on-pine)}
+.steps p{color:var(--on-pine-muted);font-size:1rem}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:56px;align-items:start}
+.about .prose{display:grid;gap:18px;max-width:62ch}
+.about .prose h2{font-size:var(--step-3);font-weight:800}
+.ledger{display:grid;gap:0;border-top:2px solid var(--ink)}
+.ledger div{display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.ledger dt{font-family:var(--display);font-weight:800;font-size:1.5rem;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.ledger dd{margin:0;color:var(--muted);font-size:.95rem;line-height:1.4}
+.name-note{margin-top:8px;padding:20px 22px;background:var(--wash);border-radius:6px;font-size:.98rem}
+.name-note b{font-family:var(--display)}
+
+/* contact */
+.contact{display:grid;gap:22px;justify-items:start}
+.contact h2{font-size:var(--step-4);font-weight:800;max-width:16ch}
+.copyrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.addr{font-family:var(--display);font-weight:700;font-size:var(--step-2);color:var(--ink);user-select:all;word-break:break-all}
+.copy{min-height:44px;padding:0 16px;border-radius:999px;border:2px solid var(--rule);background:transparent;color:var(--ink);font:700 .9rem var(--body);cursor:pointer}
+.copy:hover{border-color:var(--ink)}
+
+footer{padding-block:28px 40px;border-top:1px solid var(--rule);color:var(--muted);font-size:.88rem}
+footer .bar{gap:12px}
+
+@media (max-width:860px){
+  .fit{grid-template-columns:1fr}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .about{grid-template-columns:1fr;gap:36px}
+}
+@media (max-width:620px){
+  .services{grid-template-columns:1fr}
+  .services article,.services article:nth-child(even){padding:22px 0;border-left:0}
+  .steps{grid-template-columns:1fr}
+  section{padding-block:56px}
+  nav ul{gap:16px}
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="logo.png">
+<meta property="og:title" content="Scout Advisory">
+<meta property="og:description" content="Fractional customer success leadership for B2B SaaS and EdTech. Renewal is the floor. Upsell is the plan.">
+<meta property="og:image" content="https://scoutadvisory.org/logo.png">
+<meta property="og:url" content="https://scoutadvisory.org/">
+<meta name="twitter:card" content="summary">
+</head>
+<body>
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="bird">
+      <g transform="rotate(-8 50 55)">
+        <path d="M34 62 L8 42 L13 37 L39 56 Z"/>
+        <path d="M30 60 C30 45 45 35 60 38 C70 40 76 46 76 52 C76 62 66 70 52 70 C42 70 34 67 30 60 Z"/>
+        <circle cx="70" cy="35" r="11"/>
+        <path d="M80 32 L93 30 L81 38 Z"/>
+        <path d="M44 51 C51 46 60 47 65 53 C58 55 50 55 44 51 Z" fill="var(--paper)"/>
+        <circle cx="73.5" cy="33" r="2.2" fill="var(--rust)"/>
+        <path d="M51 69 L49 80 M58 69 L59 80" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      </g>
+    </g>
+  </defs>
+</svg>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Scout Advisory home">
+      <svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><use href="#bird"/></svg>
+      <span><b>Scout</b><small>ADVISORY</small></span>
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#engagement">How it works</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <p class="label">Fractional customer success leadership</p>
+    <h1 style="margin-top:14px">Renewal is the floor. <em>Upsell is the plan.</em></h1>
+    <p class="lede">Scout Advisory helps B2B SaaS and EdTech companies, and the nonprofits that serve schools, turn closed-won customers into growing recurring revenue.</p>
+    <div class="cta">
+      <a class="btn" href="#contact">Start a conversation</a>
+      <a class="btn ghost" href="#services">See services</a>
+    </div>
+
+    <div class="wire" aria-label="The customer lifecycle Scout Advisory works on">
+      <svg class="perch" viewBox="0 0 100 100" fill="var(--ink)" style="color:var(--ink)" aria-hidden="true"><use href="#bird"/></svg>
+      <ol>
+        <li><b>Closed-won</b><span>The deal is signed. Most teams stop here.</span></li>
+        <li><b>Onboarded</b><span>A structured path from contract to first value.</span></li>
+        <li><b>Adopted</b><span>Real usage across the people who bought it.</span></li>
+        <li><b>Renewed</b><span>Forecast early, with risk surfaced months out.</span></li>
+        <li><b>Expanded</b><span>The signals show who is ready to grow.</span></li>
+      </ol>
+      <p class="wire-note">Every engagement works this line, left to right.</p>
+    </div>
+  </div>
+
+  <section id="fit">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">Who it's for</p>
+        <h2>You need customer success leadership before you need a full-time VP.</h2>
+      </div>
+      <div class="fit">
+        <div>
+          <h3>Outgrowing founder-led accounts</h3>
+          <p>The founder knows every customer by gut. That stops working at scale. Build the system now, while you can still check it against instinct.</p>
+        </div>
+        <div>
+          <h3>Between CS leaders</h3>
+          <p>Someone needs to hold renewals steady and keep the team moving while you hire the right permanent leader.</p>
+        </div>
+        <div>
+          <h3>Launching a paid offering</h3>
+          <p>Moving from free, pilot or grant-funded programs to paid subscriptions means building a post-sale motion that didn't exist before.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">Services</p>
+        <h2>What Scout Advisory builds</h2>
+        <p>Each piece stands on its own. Most engagements start with a health framework, because everything else depends on knowing which accounts are healthy.</p>
+      </div>
+      <div class="services">
+        <article>
+          <span class="tag">Know your accounts</span>
+          <h3>Customer health frameworks</h3>
+          <p>Define the signals that predict renewal, churn and expansion, then build them into your CRM so risk and opportunity surface early.</p>
+        </article>
+        <article>
+          <span class="tag">Get to value faster</span>
+          <h3>Onboarding and adoption playbooks</h3>
+          <p>A structured path from signed contract to measurable value, including implementation for school and district customers.</p>
+        </article>
+        <article>
+          <span class="tag">Grow the base</span>
+          <h3>Renewals and expansion</h3>
+          <p>Renewal forecasting, risk reviews, and a scoring model that finds the pilots and accounts ready to expand.</p>
+        </article>
+        <article>
+          <span class="tag">Run it well</span>
+          <h3>CS operations</h3>
+          <p>CRM structure, lifecycle sequences, support workflows, executive reporting and AI-assisted account management.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="engagement" class="pine">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">How it works</p>
+        <h2>A typical first engagement</h2>
+        <p>Usually about five weeks. You end with a working system your team owns, not a slide deck.</p>
+      </div>
+      <ol class="steps">
+        <li data-wk="1"><h3>Read the data</h3><p>Usage, onboarding, support and CRM history. Plus conversations with the people closest to customers.</p></li>
+        <li data-wk="2"><h3>Find the leaks</h3><p>Where customers stall between closed-won and full adoption, and which accounts are quietly ready to grow.</p></li>
+        <li data-wk="3–4"><h3>Build the playbook</h3><p>The health score, the plays that follow from it, and the sequences and reports that run them.</p></li>
+        <li data-wk="5"><h3>Hand it off</h3><p>Your team runs it with me alongside, then on their own. Ongoing fractional support if you want it.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div class="prose">
+        <p class="label">About</p>
+        <h2>Led by Nick Trusty</h2>
+        <p>I've built customer success from scratch as a founder and led it at national scale. At Learning Ally, I ran a 35-person post-sale organization serving K-12 districts and schools across the country, owning onboarding, adoption, renewals and expansion, and leading AI enablement across sales and CS.</p>
+        <p>Before that, I co-founded Alumni Spaces, a SaaS platform for universities, where I ran customer success myself and kept every national client for five years. I also co-founded Lat Long, a digital product agency for mission-driven organizations.</p>
+        <p>I do my best work hands-on: on customer calls, in the account data, and building the first version of the system before a team scales it.</p>
+        <div class="name-note">
+          <b>Why "Scout"?</b> After Scout Finch: curious, direct, and not inclined to take the official story at face value. That's how we read your customer data.
+        </div>
+      </div>
+      <dl class="ledger" aria-label="Track record">
+        <div><dt>76→86%</dt><dd>Renewal rate at Learning Ally, across a national K-12 portfolio</dd></div>
+        <div><dt>2,950</dt><dd>School districts in the portfolio, plus 24,000 schools</dd></div>
+        <div><dt>~500K</dt><dd>Active classroom users at peak adoption</dd></div>
+        <div><dt>0</dt><dd>Customers lost in five years at Alumni Spaces</dd></div>
+        <div><dt>2×</dt><dd>Founder: Alumni Spaces and Lat Long</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <p class="label">Contact</p>
+      <h2>Tell me where your customers stall.</h2>
+      <p style="max-width:52ch;color:var(--muted)">A 30-minute call is enough to tell whether a fractional engagement makes sense. No pitch deck required.</p>
+      <div class="copyrow">
+        <a class="addr" id="addr" href="mailto:nick.trusty@gmail.com">nick.trusty@gmail.com</a>
+        <button class="copy" id="copy-btn" type="button">Copy email</button>
+      </div>
+      <p><a href="https://www.linkedin.com/company/scout-advisory-nyc" target="_blank" rel="noopener">Scout Advisory on LinkedIn</a> · <a href="https://www.linkedin.com/in/nicktrusty" target="_blank" rel="noopener">Nick on LinkedIn</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap bar">
+    <span>© 2026 Scout Advisory LLC · Brooklyn, NY</span>
+    <span>scoutadvisory.org</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('copy-btn').addEventListener('click', function(){
+  var b=this, t=document.getElementById('addr').textContent.trim();
+  function selectIt(){var r=document.createRange();r.selectNodeContents(document.getElementById('addr'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected - press Copy';}
+  try{
+    navigator.clipboard.writeText(t).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy email'},1800)}, selectIt);
+  }catch(e){selectIt()}
+});
+</script>
+
+</body>
+</html>
