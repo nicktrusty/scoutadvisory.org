@@ -52,7 +52,8 @@ nav a:hover{color:var(--rust-ink)}
 .hero h1{font-size:var(--step-4);font-weight:800;max-width:15ch}
 .hero h1 em{font-style:normal;color:var(--rust-ink)}
 .hero .lede cite{font-style:italic}
-.hero .lede{margin-top:22px;font-size:var(--step-1);max-width:46ch;color:var(--muted)}
+.hero .lede{margin-top:22px;font-size:var(--step-1);max-width:48ch;color:var(--muted)}
+.hero .lede strong{display:block;color:var(--ink);font-family:var(--display);font-weight:700;font-size:var(--step-2);line-height:1.2;letter-spacing:-.01em;margin-bottom:10px;max-width:26ch}
 .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;align-items:center}
 .btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;background:var(--pine);color:var(--on-pine);font-weight:700;text-decoration:none;border:2px solid var(--pine)}
 .btn:hover{background:var(--rust);border-color:var(--rust);color:#fff}
@@ -118,7 +119,7 @@ section{padding-block:72px;border-top:1px solid var(--rule)}
 .about .prose{display:grid;gap:18px;max-width:62ch}
 .about .prose h2{font-size:var(--step-3);font-weight:800}
 .ledger{display:grid;gap:0;border-top:2px solid var(--ink)}
-.ledger div{display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.ledger div{display:grid;grid-template-columns:8.6rem minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--rule);align-items:baseline}
 .ledger dt{font-family:var(--display);font-weight:800;font-size:1.5rem;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
 .ledger dd{margin:0;color:var(--muted);font-size:.95rem;line-height:1.4}
 .side{display:grid;gap:22px;align-content:start}
@@ -139,6 +140,10 @@ section{padding-block:72px;border-top:1px solid var(--rule)}
 
 footer{padding-block:28px 40px;border-top:1px solid var(--rule);color:var(--muted);font-size:.88rem}
 footer .bar{gap:12px}
+.sign-off{display:flex;gap:14px;align-items:flex-start;margin-bottom:26px;color:var(--ink)}
+.sign-off svg{width:54px;height:54px;flex:none;margin-top:-4px}
+.sign-off p{font-family:"Caveat","Bradley Hand","Segoe Print",cursive;font-weight:500;font-size:1.45rem;line-height:1.15;color:var(--muted);max-width:34ch;transform:rotate(-1.5deg);transform-origin:left top}
+.sign-off b{font-weight:500;color:var(--rust-ink)}
 
 @media (max-width:860px){
   .fit{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -156,7 +161,7 @@ footer .bar{gap:12px}
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="logo.png">
 <meta property="og:title" content="Scout Advisory">
-<meta property="og:description" content="Fractional customer success leadership for B2B SaaS and EdTech. Renewal is the floor. Upsell is the plan.">
+<meta property="og:description" content="By the time a customer says it out loud, the data said it months ago. Fractional customer success leadership for B2B SaaS and EdTech.">
 <meta property="og:image" content="https://scoutadvisory.org/logo.png">
 <meta property="og:url" content="https://scoutadvisory.org/">
 <meta name="twitter:card" content="summary">
@@ -201,7 +206,7 @@ footer .bar{gap:12px}
   <div class="wrap hero">
     <p class="label">Fractional customer success leadership</p>
     <h1 style="margin-top:14px">Renewal is the floor. <em>Upsell is the plan.</em></h1>
-    <p class="lede">Named for Scout Finch of <cite>To Kill a Mockingbird</cite>: curious, direct and unwilling to accept the official story. We read your customer data the same way, turning closed-won deals into growing recurring revenue for B2B SaaS and EdTech.</p>
+    <p class="lede"><strong>By the time a customer says it out loud, the data said it months ago.</strong> Scout Advisory reads it early, while there's still time to act, turning closed-won deals into growing recurring revenue for B2B SaaS and EdTech.</p>
     <div class="cta">
       <a class="btn" href="#contact">Start a conversation</a>
       <a class="btn ghost" href="#services">See services</a>
@@ -218,7 +223,6 @@ footer .bar{gap:12px}
         <li><b>Renewed</b><span>Forecast early, with risk surfaced months out.</span></li>
         <li><b>Expanded</b><span>The signals show who is ready to grow.</span></li>
       </ol>
-      <p class="wire-note"><strong>By the time a customer says it out loud, the data said it months ago.</strong> Scout Advisory reads it early, while there's still time to act.</p>
     </div>
   </div>
 
@@ -286,13 +290,13 @@ footer .bar{gap:12px}
       <div class="sec-head">
         <p class="label">How it works</p>
         <h2>A typical first engagement</h2>
-        <p>Each one is scoped to your team and your data. You end with a working system your people own and run.</p>
+        <p>Each one is scoped to your team and your data. You end with a working system your people trust, own and actually use.</p>
       </div>
       <ol class="steps">
-        <li data-wk="1"><h3>Read the data</h3><p>Usage, onboarding, support and CRM history. Plus conversations with the people closest to customers.</p></li>
-        <li data-wk="2"><h3>Find the leaks</h3><p>Where customers stall between closed-won and full adoption, and which accounts are quietly ready to grow.</p></li>
-        <li data-wk="3"><h3>Build the playbook</h3><p>The health score, the plays that follow from it, and the sequences and reports that run them.</p></li>
-        <li data-wk="4"><h3>Hand it off</h3><p>Your team runs it with Scout alongside, then on their own. Ongoing fractional support if you want it.</p></li>
+        <li data-wk="1"><h3>Read the data</h3><p>Usage, onboarding, support and CRM history show what happened. The people closest to your customers know why. Those conversations surface the signals your team already trusts, and the ones they've stopped trusting. They also make sure the system gets built with the people who'll run it, not handed to them.</p></li>
+        <li data-wk="2"><h3>Find the leaks</h3><p>Where customers stall between closed-won and full adoption, which renewals are at risk before anyone has flagged them, and which accounts are quietly ready to grow.</p></li>
+        <li data-wk="3"><h3>Build the playbook</h3><p>A health score your team believes, the plays that follow from each signal, and the sequences and reports that run them. Tested against real accounts before anyone is asked to rely on it.</p></li>
+        <li data-wk="4"><h3>Make it stick</h3><p>New systems fail when they're bolted onto old habits. Scout works through the transition with your team: who owns which signals, how weekly account reviews change, what managers inspect, and how it shows up in reporting to leadership. Scout stays alongside until it runs without anyone pushing it. Ongoing fractional support if you want it.</p></li>
       </ol>
     </div>
   </section>
@@ -312,10 +316,10 @@ footer .bar{gap:12px}
           <figcaption><b>Nick Trusty</b> · Managing Partner</figcaption>
         </figure>
         <dl class="ledger" aria-label="Track record">
-          <div><dt>76→86%</dt><dd>Renewal rate at a leading literacy nonprofit serving K-12 schools</dd></div>
-          <div><dt>2,950</dt><dd>School districts in that portfolio, plus 24,000 schools</dd></div>
-          <div><dt>~500K</dt><dd>Active classroom users at peak adoption</dd></div>
-          <div><dt>0</dt><dd>Customers lost in five years at a SaaS company Nick co-founded</dd></div>
+          <div><dt>$1M+</dt><dd>Added renewal and upsell revenue in Nick's first year leading post-sale at a leading literacy nonprofit</dd></div>
+          <div><dt>76→86%</dt><dd>Renewal rate across that K-12 portfolio</dd></div>
+          <div><dt>$0→$250K</dt><dd>ARR built at a SaaS company Nick co-founded, without losing a customer in five years</dd></div>
+          <div><dt>2,950</dt><dd>School districts in the portfolio, plus 24,000 schools</dd></div>
         </dl>
       </div>
     </div>
@@ -336,9 +340,15 @@ footer .bar{gap:12px}
 </main>
 
 <footer>
-  <div class="wrap bar">
-    <span>© 2026 Scout Advisory LLC · Brooklyn, NY</span>
-    <span>scoutadvisory.org</span>
+  <div class="wrap">
+    <div class="sign-off">
+      <svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><use href="#bird"/></svg>
+      <p><b>Why Scout?</b> Named for Scout Finch, who asked too many questions and never took the official story at face value. Same idea, pointed at your customer data.</p>
+    </div>
+    <div class="bar">
+      <span>© 2026 Scout Advisory LLC · Brooklyn, NY</span>
+      <span>scoutadvisory.org</span>
+    </div>
   </div>
 </footer>
 
