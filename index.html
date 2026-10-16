@@ -385,6 +385,18 @@ document.getElementById('copy-btn').addEventListener('click', function(){
     navigator.clipboard.writeText(t).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy email'},1800)}, selectIt);
   }catch(e){selectIt()}
 });
+
+// Contact-intent events for GA4 (email and LinkedIn clicks)
+(function(){
+  function track(name, params){ try{ if(typeof gtag==='function') gtag('event', name, params); }catch(e){} }
+  document.getElementById('addr').addEventListener('click', function(){ track('contact_email', {method:'mailto'}); });
+  document.getElementById('copy-btn').addEventListener('click', function(){ track('contact_email', {method:'copy'}); });
+  document.querySelectorAll('a[href*="linkedin.com"]').forEach(function(a){
+    a.addEventListener('click', function(){ track('linkedin_click', {link_url:a.href, link_text:a.textContent.trim()}); });
+  });
+  var cta=document.querySelectorAll('a[href="#contact"]');
+  cta.forEach(function(a){ a.addEventListener('click', function(){ track('contact_cta_click', {link_text:a.textContent.trim()}); }); });
+})();
 </script>
 
 </body>
