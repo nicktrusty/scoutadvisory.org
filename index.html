@@ -131,8 +131,15 @@ section{padding-block:72px;border-top:1px solid var(--rule)}
 .name-note b{font-family:var(--display)}
 
 /* contact */
-.contact{display:grid;gap:22px;justify-items:start}
-.contact h2{font-size:var(--step-4);font-weight:800;max-width:16ch}
+.contact{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:56px;align-items:end}
+.contact .main{display:grid;gap:22px;justify-items:start}
+.first-call{border-top:2px solid var(--ink)}
+.first-call h3{font-size:var(--step-1);font-weight:700;padding:16px 0 4px}
+.first-call ul{list-style:none;margin:0;padding:0}
+.first-call li{padding:12px 0 12px 22px;border-bottom:1px solid var(--rule);color:var(--muted);font-size:.98rem;line-height:1.45;position:relative}
+.first-call li::before{content:"";position:absolute;left:0;top:20px;width:9px;height:9px;border-radius:50%;background:var(--rust)}
+@media (max-width:860px){.contact{grid-template-columns:1fr;gap:36px}}
+.contact h2{font-size:clamp(2.4rem, 5vw, 3.6rem);font-weight:800}
 .copyrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 .addr{font-family:var(--display);font-weight:700;font-size:var(--step-2);color:var(--ink);user-select:all;word-break:break-all}
 .copy{min-height:44px;padding:0 16px;border-radius:999px;border:2px solid var(--rule);background:transparent;color:var(--ink);font:700 .9rem var(--body);cursor:pointer}
@@ -140,9 +147,9 @@ section{padding-block:72px;border-top:1px solid var(--rule)}
 
 footer{padding-block:28px 40px;border-top:1px solid var(--rule);color:var(--muted);font-size:.88rem}
 footer .bar{gap:12px}
-.sign-off{display:flex;gap:14px;align-items:flex-start;margin-bottom:26px;color:var(--ink)}
-.sign-off svg{width:54px;height:54px;flex:none;margin-top:-4px}
-.sign-off p{font-family:"Caveat","Bradley Hand","Segoe Print",cursive;font-weight:500;font-size:1.45rem;line-height:1.15;color:var(--muted);max-width:34ch;transform:rotate(-1.5deg);transform-origin:left top}
+.sign-off{display:flex;gap:16px;align-items:center;margin-bottom:24px;color:var(--ink)}
+.sign-off svg{width:52px;height:52px;flex:none;transform-origin:50% 90%;animation:hop 5.5s ease-in-out 2.4s infinite}
+.sign-off p{font-family:"Caveat","Bradley Hand","Segoe Print",cursive;font-weight:500;font-size:1.45rem;line-height:1.2;color:var(--muted);transform:rotate(-.5deg);transform-origin:left center}
 .sign-off b{font-weight:500;color:var(--rust-ink)}
 
 @media (max-width:860px){
@@ -327,6 +334,7 @@ footer .bar{gap:12px}
 
   <section id="contact">
     <div class="wrap contact">
+      <div class="main">
       <p class="label">Contact</p>
       <h2>Tell us where your customers stall.</h2>
       <p style="max-width:52ch;color:var(--muted)">A 30-minute call is enough to tell whether a fractional engagement makes sense. No pitch deck required.</p>
@@ -335,6 +343,15 @@ footer .bar{gap:12px}
         <button class="copy" id="copy-btn" type="button">Copy email</button>
       </div>
       <p><a href="https://www.linkedin.com/company/scout-advisory-nyc" target="_blank" rel="noopener">Scout Advisory on LinkedIn</a> · <a href="https://www.linkedin.com/in/nicktrusty" target="_blank" rel="noopener">Nick on LinkedIn</a></p>
+      </div>
+      <div class="first-call">
+        <h3>What a first call covers</h3>
+        <ul>
+          <li>Where customers stall today, between closed-won and renewal</li>
+          <li>What data you already have: CRM, usage, support</li>
+          <li>Whether a fractional engagement, a scoped project, or neither is the right fit</li>
+        </ul>
+      </div>
     </div>
   </section>
 </main>
